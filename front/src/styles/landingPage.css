@@ -1,0 +1,220 @@
+/* -------------------- Container ------------------- */
+.container {
+  margin: 0 auto;
+  max-width: 768px;
+}
+/* -------------------- General ------------------- */
+.text--bold {
+  font-weight: bold;
+}
+.text--bolder {
+  font-weight: bolder;
+}
+.text--white {
+  color: var(--primary-color);
+}
+.text--black {
+  color: var(--secondary-color);
+}
+.text--yellow {
+  color: var(--tertiary-color);
+}
+.bg--white {
+  background-color: var(--primary-color);
+}
+.bg--black {
+  background-color: var(--secondary-color);
+}
+.bg--yellow {
+  background-color: var(--tertiary-color);
+}
+.text--center {
+  text-align: center;
+}
+
+/* -------------------- IntroBox ------------------- */
+.introBox {
+  background-image: url("./../images/cover.jpg");
+  height: 80vh;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+}
+/*  IntroBox Header */
+.introBox__header {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 20px;
+  padding: 0 20px;
+  transform: translateY(40px);
+}
+
+.introBox__header-title {
+  margin: 10px 20px;
+  width: 250px;
+  font-weight: bold;
+}
+.introBox__header-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.introBox__header__listItem {
+  margin: 10px;
+  border: 0;
+  background-color: var(--primary-color);
+  font-weight: bold;
+}
+.introBox__header__login {
+  align-self: center;
+}
+.introBox__header__loginButton {
+  border-radius: 50px;
+  border: 10px;
+  background-color: var(--tertiary-color);
+  padding: 8px 10px;
+  font-weight: 750;
+  font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  .introBox {
+  }
+  .introBox__header__listItem {
+    display: none;
+  }
+  .introBox__header-title {
+    width: 400px;
+    font-size: 0.7rem;
+    margin: 10px 5px;
+  }
+}
+
+/*  IntroBox Content */
+.introBox__content {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 80px 80px 50px 80px;
+}
+
+.introBox__content__heading {
+  font-weight: bold;
+}
+.introBox__content__text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.introBox__content__button {
+  margin-top: 30px;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: var(--tertiary-color);
+}
+@media (max-width: 768px) {
+  .introBox__content {
+    font-size: 0.7rem;
+  }
+}
+
+/* -------------------- Airlines ------------------- */
+.airlines {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .airlines {
+    display: grid;
+    grid-template: auto / auto auto;
+  }
+  .airline {
+    margin: 10px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .airlines {
+    grid-template: auto / auto;
+  }
+  .airline {
+    border: 1px solid black;
+  }
+}
+
+/* -------------------- Packages ------------------- */
+.packages {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+.packages__package {
+  margin: 10px;
+}
+.packages__heading-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0px;
+  margin-top: 60px;
+}
+.packages__heading-text {
+  font-weight: 500;
+}
+.package__image {
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+}
+.package__type {
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+.package__name {
+  font-weight: bold;
+}
+.package__price {
+  font-weight: 700;
+}
+.package__price--blue {
+  color: #4492f9;
+  font-size: 1rem;
+  display: inline;
+}
+.package__details-button {
+  background-color: #ecec13;
+  border: 0;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  padding: 5px 15px;
+}
+@media (max-width: 768px) {
+  .packages {
+    grid-template-columns: auto auto;
+  }
+  .packages__package {
+    margin-top: 30px;
+  }
+  .package__image {
+    width: 250px;
+    height: 200px;
+  }
+}
+@media (max-width: 550px) {
+  .packages {
+    grid-template-columns: auto;
+  }
+  .packages__package {
+    margin-top: 30px;
+  }
+  .package__image {
+    width: 250px;
+    height: 200px;
+  }
+}
